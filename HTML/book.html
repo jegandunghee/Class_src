@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/font.css" />
+    <link rel="stylesheet" href="../CSS/reset.css" />
+    <link rel="stylesheet" href="../CSS/book.css" />
+  </head>
+  <body class="raleway-base">
+    <main>
+      <div class="book-img">
+        <div class="page">
+          <div class="front"></div>
+          <div class="back"></div>
+        </div>
+        <div class="side"></div>
+      </div>
+    </main>
+
+    <section>
+      <div class="title">
+        <h2>결핍은 우리를 어떻게 변화시키는가</h2>
+        <h3>부족함이 만들어 내는 선택과 행동의 비밀</h3>
+      </div>
+
+      <div class="author">
+        <p>저자 : 센딜 멀레이너선, 엘다 샤퍼 | 엮은이 : 이경식</p>
+        <q
+          >결핍이 우리의 인지 능력에 영향을 미치는 여러 사례와 방대한 연구
+          결과를 살펴보며 결핍이 우리의 행동과 의사 결정에 미치는 영향을 상세히
+          분석한다. 출처 : 예스24
+          <https://www.yes24.com/product/goods/143330924></q
+        >
+      </div>
+      <div class="txt">
+        <p>
+          이 책을 선택한 이유 : 우연히 유튜브에서 책 소개하는 영상을 보게되었음
+          상당히 잘만들어진 영상이라 책에도 관심을 가지게 되었음.
+        </p>
+      </div>
+    </section>
+
+    <script>
+      const book = document.querySelector(".book-img");
+      book.addEventListener("click", () => {
+        book.classList.toggle("flipped");
+      });
+    </script>
+  </body>
+</html>

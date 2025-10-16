@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+/* 폰트 스타일 적용하기 */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+.raleway-base {
+  font-family: "Raleway";
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}

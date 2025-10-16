@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+
+.container{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+}
+
+.container > li{
+  position: relative;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+}
+
+.container > li:hover > .tooltip{
+  opacity: 1;
+}
+
+.container > img{
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 말풍선 전체 */
+.container .tooltip{
+  position: absolute;
+  left: 40%;
+  top: -90px;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+/* 말풍선 본체 */
+.container .txt{
+  width: 250px;
+  height: 40px;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+
+/* 말풍선 뾰족 */
+.container .tri{
+  width: 15px;
+  height: 15px;
+  background-color: #333;
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%) rotateZ(45deg);
+}
+
+
+

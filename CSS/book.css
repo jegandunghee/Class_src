@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+body{
+  background-color: #eee;
+}
+main{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* 원근감 -3d처럼 보여지도록 설정 */
+  perspective: 1000px;
+}
+
+.book-img{
+  width: 800px;
+  height: 1200px;
+  position: relative;
+
+  transform-style: preserve-3d;
+  transition: 0.3s;
+}
+
+.book-img.flipped{
+  transform: rotateY(180deg);
+  cursor: url("../Img/arow-2.png"), auto;
+}
+
+.book-img:not(.flipped):hover{
+  transform: rotateY(40deg);
+  cursor: url("../Img/arow-2.png"), auto;
+}
+
+.page{
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.page > div{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* 요소끼리 겹칠 때 앞면만 보이도록 하기 */
+  backface-visibility: hidden;
+}
+
+.front{
+  background-image: url(../Img/book_front.jfif);
+  background-size: contain;
+  transform: translateZ(72px);
+}
+
+.back{
+  background-image: url(../Img/book_back.jfif);
+  background-size: contain;
+  transform: translateZ(-72px) rotateY(180deg);
+}
+
+.side{
+  background-image: url(../Img/book_side.jfif);
+  width: 144px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+   /* width (70px)의 절반만큼 이동하기 */
+  left: -72px;
+
+
+  transform: rotateY(-90deg);
+}
+
